@@ -16,4 +16,13 @@ describe "Juego" do
 		expect(juego.resultado).to eq "PERDIO" 
 	end
 
+	it "jugador pide carta, banca otorga 5, jugador pide carta, banca otorga 1, jugador se planta, puntaje jugador suma 6, cambia el turno" do
+		juego=Juego.new
+		juego.pideCarta 5
+		juego.pideCarta 1
+		juego.plantarse
+		expect(juego.puntajeJugador).to eq 6
+		expect(juego.jugadorActual).to eq "MAQUINA" 
+	end
+
 end

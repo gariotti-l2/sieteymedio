@@ -2,6 +2,7 @@ class Juego
 
 	def initialize
 		@puntajeJugador = 0
+		@jugadorActual = "JUGADOR"
 	end
 
 	def pideCarta valorCarta
@@ -14,6 +15,14 @@ class Juego
 
 	def resultado
 		"PERDIO"
+	end
+
+	def plantarse
+		@jugadorActual = "MAQUINA"
+	end
+
+	def jugadorActual
+		@jugadorActual
 	end
 	
 
