@@ -19,7 +19,7 @@
         </tr>
         <tr>
             <td>0</td>
-            <td><%=@puntajeJugador%></td>
+            <td id="puntajeJugador"><%=@puntajeJugador%></td>
         </tr>
 	&nbsp; Jugador Actual: <%=@jugadorActual%>
 	&nbsp; Resultado: <%=@resultado%>
@@ -39,7 +39,10 @@
         <div class="acciones">
             <button class="nuevo">Juego Nuevo</button>
             <button class="planto">Me Planto</button>
-            <button class="otra">Otra</button>
+
+		<form method="post" action="/pidecarta">
+         	   <input type="submit" class="otra" value="Otra">
+		</form>
         </div>
     </div>
 </body>

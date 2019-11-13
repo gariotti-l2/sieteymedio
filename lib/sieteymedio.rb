@@ -3,10 +3,12 @@ class Juego
 	def initialize
 		@puntajeJugador = 0
 		@jugadorActual = "JUGADOR"
+		@proxCarta = 0
 	end
 
-	def pideCarta valorCarta
-		@puntajeJugador += valorCarta
+	def pideCarta
+		@puntajeJugador += @proxCarta
+			
 	end
 
 	def puntajeJugador
@@ -24,6 +26,8 @@ class Juego
 	def jugadorActual
 		@jugadorActual
 	end
-	
+	def proximaCarta proxCarta
+		@proxCarta = proxCarta
+	end
 
 end

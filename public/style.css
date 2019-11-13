@@ -74,10 +74,3 @@ button:hover {
     color: white;
 }
 
-.acciones {
-    display: block;
-    height: 60px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
