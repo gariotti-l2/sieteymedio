@@ -13,6 +13,7 @@ post '/pidecarta' do
 	@@juego.pideCarta
 	@puntajeJugador= @@juego.puntajeJugador
 	@resultado= @@juego.resultado
+	@cartaActual= @@juego.cartaActual
 	@jugadorActual= @@juego.jugadorActual
 	erb :index   
 end

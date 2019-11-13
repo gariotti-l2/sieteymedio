@@ -11,6 +11,11 @@ class Juego
 			
 	end
 
+	def cartaActual
+		@proxCarta
+			
+	end
+
 	def puntajeJugador
 		@puntajeJugador
 	end
