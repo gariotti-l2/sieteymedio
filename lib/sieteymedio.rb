@@ -11,6 +11,10 @@ class Juego
 	def puntajeJugador
 		@puntajeJugador
 	end
+
+	def resultado
+		"PERDIO"
+	end
 	
 
 end

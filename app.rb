@@ -6,5 +6,6 @@ get '/' do
 	juego.pideCarta 5
 	juego.pideCarta 2
 	@puntajeJugador=juego.puntajeJugador
+	@resultado=juego.resultado
 	erb :index    
 end
