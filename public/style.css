@@ -118,7 +118,7 @@ table td {
 }
 
 .mesa p {
-	font-size: 26px;
+	font-size: 36px;
 	text-align: center;
 	color: yellow;
 }
@@ -126,15 +126,14 @@ table td {
 .banca,
 .jugador {
 	float: left;
-margin: 0 5px;
+	margin: 0 5px;
 }
 
 .mazo {
     background-image: url(repetto.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: -45px;
-	border-bottom: 10px solid darkgrey;
+    background-position: -85px;
 }
 
 .carta {
@@ -152,6 +151,26 @@ margin: 0 5px;
 .carta.muestra {
 	outline: 1px solid black;
 	outline-offset: -16px;
+	position: relative;
+}
+
+.carta.muestra .dot {
+	height: 30px;
+	width: 30px;
+	background-color: yellow;
+	display: block;
+	position: absolute;
+	border: 3px dotted orange;
+	border-radius: 50%;
+}
+
+.dot.dot-a {
+	top: 24px;
+	left: 24px;
+}
+.dot.dot-b {
+	bottom: 24px;
+	right: 24px;
 }
 
 .carta .num {
