@@ -2,6 +2,7 @@ class Juego
 
 	def initialize
 		@puntajeJugador = 0
+		@puntajeBanca = 0
 		@jugadorActual = "JUGADOR"
 		@proxCarta = 0
 	end
@@ -11,10 +12,20 @@ class Juego
 			@puntajeJugador += 0.5
 		else
 			@puntajeJugador += @proxCarta
-		end 
-		
+		end 		
 			
 	end
+
+	def pideCartaBanca
+		if @proxCarta>9 
+			@puntajeBanca += 0.5
+		else
+			@puntajeBanca += @proxCarta
+		end 
+		puts "Banca: " + @puntajeBanca.to_s		
+			
+	end
+
 
 	def cartaActual
 		@proxCarta
@@ -23,6 +34,10 @@ class Juego
 
 	def puntajeJugador
 		@puntajeJugador
+	end
+
+	def puntajeBanca
+		@puntajeBanca
 	end
 
 	def resultado

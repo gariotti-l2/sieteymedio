@@ -15,4 +15,11 @@ When(/^jugador se planta$/) do
   click_button "Plantarse"
 end
 
+When(/^banca pide carta y saco (\d+)$/) do |carta|
+  @@juego.proximaCarta carta.to_i
+  @@juego.pideCartaBanca
+  visit '/dothings'
+end
+
+
 
