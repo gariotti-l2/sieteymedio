@@ -17,3 +17,12 @@ post '/pidecarta' do
 	@jugadorActual= @@juego.jugadorActual
 	erb :index   
 end
+
+post '/meplanto' do
+	@@juego.plantarse
+	@puntajeJugador= @@juego.puntajeJugador
+	@resultado= @@juego.resultado
+	@cartaActual= @@juego.cartaActual
+	@jugadorActual= @@juego.jugadorActual
+	erb :index   
+end

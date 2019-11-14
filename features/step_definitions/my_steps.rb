@@ -11,3 +11,8 @@ When(/^pido carta y saco (\d+)$/) do |carta|
   click_button "Otra"
 end
 
+When(/^jugador se planta$/) do
+  click_button "Plantarse"
+end
+
+
