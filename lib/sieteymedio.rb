@@ -42,8 +42,9 @@ class Juego
 	end
 
 	def cartaActual
-		@proxCarta
-			
+		if not @proxCarta==0
+			@proxCarta
+		end			
 	end
 
 	def puntajeJugador
@@ -74,30 +75,25 @@ class Juego
 	def plantarse
 		@jugadorActual = "MAQUINA"
 
-		if not @mocking 
-			while @jugando do
-	
+		if not @mocking and not @puntajeJugador>7.5
+			while @jugando do	
 				if @puntajeJugador>@puntajeBanca
 				   sorteaProximaCarta
 				   pideCartaBanca
 				else
 					break
 				end
-
 			end
 		end 
-
 	end
 
 	def jugadorActual
 		@jugadorActual
 	end
-
 	def sorteaProximaCarta
 		arr = [1,2,3,4,5,6,7,10,11,12]
 		@proxCarta = arr[rand(arr.count)]
 	end
-
 	def proximaCarta proxCarta
 		@mocking=true
 		@proxCarta = proxCarta
@@ -106,5 +102,4 @@ class Juego
 	def jugando
 		@jugando
 	end
-
 end
