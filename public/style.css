@@ -3,10 +3,11 @@ body {
     margin: 0 auto;
     height: 100%;
     width: 100%;
-
-    background-color: green;
+	
+color: #FFFFFF;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
+	background-color: #0b6623;
 }
 
 h1.logo {
@@ -47,21 +48,21 @@ button:hover {
 }
 
 .mazo {
-    background-image: url(assets/repetto.jpg);
+    background-image: url(repetto.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: -45px;
 }
 
 .carta {
     background-color: white;
-    border: 2px solid darkslategrey;
+    border: 1px solid black;
     border-radius: 10px;
     display: inline-block;
     height: 200px;
     width: 120px;
     
-    box-shadow: 3px 2px 2px 6px black,
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.4),
 }
 
 .otra {
