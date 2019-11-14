@@ -20,7 +20,7 @@ get '/dothings' do
 	erb :index    
 end
 
-post '/pidecarta' do
+post '/pidecarta' do	
 	@@juego.pideCarta
 	@puntajeJugador= @@juego.puntajeJugador
 	@puntajeBanca= @@juego.puntajeBanca

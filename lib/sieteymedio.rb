@@ -64,6 +64,11 @@ class Juego
 		@jugadorActual
 	end
 
+	def sorteaProximaCarta
+		arr = [1,2,3,4,5,6,7,10,11,12]
+		@proxCarta = arr[rand(arr.count)]
+	end
+
 	def proximaCarta proxCarta
 		@proxCarta = proxCarta
 	end

@@ -80,4 +80,11 @@ describe "Juego" do
 		expect(juego.resultado).to eq "GANO" 
 	end
 
+	it "prueba cartas mazo" do
+		juego=Juego.new
+		juego.sorteaProximaCarta
+		juego.pideCarta
+		expect([1,2,3,4,5,6,7,10,11,12].include?(juego.cartaActual)).to eq true
+	end
+
 end
