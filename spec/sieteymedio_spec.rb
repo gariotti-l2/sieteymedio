@@ -2,13 +2,14 @@ require "./lib/sieteymedio.rb"
 
 describe "Juego" do
 
-	it "jugador pide carta, banca otorga 5, jugador pide carta, banca otorga 2, puntaje jugador suma 7" do
+	it "jugador pide carta, banca otorga 5, jugador pide carta, banca otorga 2, puntaje jugador suma 7, el jugador esta jugando" do
 		juego=Juego.new
 		juego.proximaCarta 5
 		juego.pideCarta
 		juego.proximaCarta 2
 		juego.pideCarta
 		expect(juego.puntajeJugador).to eq 7 
+		expect(juego.resultado).to eq "JUGANDO" 
 	end
 
 	it "jugador pide carta, banca otorga 5, jugador pide carta, banca otorga 4, puntaje jugador suma 9, jugador pierde" do
@@ -61,6 +62,29 @@ describe "Juego" do
 		expect(juego.puntajeBanca).to eq 7.5
 		expect(juego.puntajeJugador).to eq 7
 		expect(juego.resultado).to eq "PERDIO" 
+	end
+
+	it "jugador pide carta, banca otorga 5, jugador pide carta, banca otorga 2, jugador se planta, banca pide carta, otorga 5, banca pide carta, otorga 4, resultado banca 9, resultado juador 7, jugador gana" do
+		juego=Juego.new
+		juego.proximaCarta 5
+		juego.pideCarta
+		juego.proximaCarta 2
+		juego.pideCarta
+		juego.plantarse
+		juego.proximaCarta 5
+		juego.pideCartaBanca				
+		juego.proximaCarta 4
+		juego.pideCartaBanca
+		expect(juego.puntajeBanca).to eq 9
+		expect(juego.puntajeJugador).to eq 7
+		expect(juego.resultado).to eq "GANO" 
+	end
+
+	it "prueba cartas mazo" do
+		juego=Juego.new
+		juego.sorteaProximaCarta
+		juego.pideCarta
+		expect([1,2,3,4,5,6,7,10,11,12].include?(juego.cartaActual)).to eq true
 	end
 
 end

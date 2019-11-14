@@ -9,6 +9,7 @@ end
 When(/^pido carta y saco (\d+)$/) do |carta|
   @@juego.proximaCarta carta.to_i
   click_button "Otra"
+  #visit '/pidecarta', :post, "proximaCarta=" + carta
 end
 
 When(/^jugador se planta$/) do
