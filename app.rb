@@ -8,6 +8,7 @@ get '/' do
 	@resultado= @@juego.resultado
 	@cartaActual= @@juego.cartaActual
 	@jugadorActual= @@juego.jugadorActual
+	@claseCarta= @@juego.claseCarta
 	erb :index    
 end
 
@@ -17,6 +18,7 @@ get '/dothings' do
 	@resultado= @@juego.resultado
 	@cartaActual= @@juego.cartaActual
 	@jugadorActual= @@juego.jugadorActual
+	@claseCarta= @@juego.claseCarta
 	erb :index    
 end
 
@@ -27,6 +29,7 @@ post '/pidecarta' do
 	@resultado= @@juego.resultado
 	@cartaActual= @@juego.cartaActual
 	@jugadorActual= @@juego.jugadorActual
+	@claseCarta= @@juego.claseCarta
 	erb :index   
 end
 
@@ -37,6 +40,7 @@ post '/meplanto' do
 	@resultado= @@juego.resultado
 	@cartaActual= @@juego.cartaActual
 	@jugadorActual= @@juego.jugadorActual
+	@claseCarta= @@juego.claseCarta
 	erb :index   
 end
 

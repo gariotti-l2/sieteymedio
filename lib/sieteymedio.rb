@@ -7,11 +7,13 @@ class Juego
 		@jugando = true
 		@proxCarta = 0
 		@mocking=false
+		@claseCarta = "mazo"
 	end
 
 	def pideCarta
 
-		if @jugando 		
+		if @jugando
+			@claseCarta = "muestra"		
 			if not @mocking			
 				sorteaProximaCarta
 			end
@@ -103,6 +105,10 @@ class Juego
 
 	def jugando
 		@jugando
+	end
+
+	def claseCarta
+		@claseCarta
 	end
 
 end
