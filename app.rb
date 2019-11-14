@@ -20,15 +20,7 @@ get '/dothings' do
 	erb :index    
 end
 
-post '/pidecarta' do
-	p_carta= params["proximaCarta"]	
-
-	if p_carta.nil?
-		@@juego.sorteaProximaCarta
-	else
-		@@juego.proximaCarta p_carta.to_i
-	end
-
+post '/pidecarta' do	
 	@@juego.pideCarta
 	@puntajeJugador= @@juego.puntajeJugador
 	@puntajeBanca= @@juego.puntajeBanca
@@ -40,22 +32,6 @@ end
 
 post '/meplanto' do
 	@@juego.plantarse
-
-	p_auto= params["auto"]	
-
-	if p_auto.nil?
-		while @@juego.jugando do
-	
-			if @@juego.puntajeJugador>@@juego.puntajeBanca
-			   @@juego.sorteaProximaCarta
-			   @@juego.pideCartaBanca
-			else
-				break
-			end
-
-		end
-	end
-
 	@puntajeJugador= @@juego.puntajeJugador
 	@puntajeBanca= @@juego.puntajeBanca
 	@resultado= @@juego.resultado

@@ -6,11 +6,12 @@ class Juego
 		@jugadorActual = "JUGADOR"
 		@jugando = true
 		@proxCarta = 0
+		@mocking=false
 	end
 
 	def pideCarta
-
-		if not @proxCarta>=0			
+		
+		if not @mocking			
 			sorteaProximaCarta
 		end
 
@@ -27,8 +28,8 @@ class Juego
 	end
 
 	def pideCartaBanca
-
-		if not @proxCarta>=0			
+		
+		if not @mocking			
 			sorteaProximaCarta
 		end
 
@@ -72,6 +73,20 @@ class Juego
 
 	def plantarse
 		@jugadorActual = "MAQUINA"
+
+		if not @mocking 
+			while @jugando do
+	
+				if @puntajeJugador>@puntajeBanca
+				   sorteaProximaCarta
+				   pideCartaBanca
+				else
+					break
+				end
+
+			end
+		end 
+
 	end
 
 	def jugadorActual
@@ -84,6 +99,7 @@ class Juego
 	end
 
 	def proximaCarta proxCarta
+		@mocking=true
 		@proxCarta = proxCarta
 	end
 

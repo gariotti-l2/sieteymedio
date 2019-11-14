@@ -7,11 +7,12 @@ Then /^debo ver "(.*)"$/ do |text|
 end
 
 When(/^pido carta y saco (\d+)$/) do |carta|
-  visit '/pidecarta', :post, "proximaCarta=" + carta
+  @@juego.proximaCarta carta.to_i
+  click_button("Otra")
 end
 
 When(/^jugador se planta$/) do
-  visit '/meplanto', :post, "auto=false"
+  click_button("Plantarse")
 end
 
 When(/^banca pide carta y saco (\d+)$/) do |carta|
