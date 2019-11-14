@@ -1,3 +1,7 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
     display: block;
     margin: 0 auto;
@@ -8,6 +12,25 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
     background-color: #0b6623;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.row,
+.footer {
+	display: block;
+	width: 100%;
+	overflow: auto;
+	clear: both;
 }
 
 h1.logo {
@@ -24,19 +47,23 @@ h1.logo {
 
 .acciones {
 	padding-top: 20px;
+	float: right;
+	text-align: center;
 }
 
 .acciones form {
-    display: inline-block;
-    width: auto;
+	display: inline-block;
+	width: auto;
+	margin: 2px 4px;
 }
 
 .acciones form input,
-.final .nuevo {
+a.nuevo {
+	font-family: Arial, sans-serif;
     background-color: white;
     border: none;
     border-radius: 8px;
-    color: darkslategray;
+    color: #000000;
     display: inline-block;
     font-size: 18px;
     min-width: 120px;
@@ -44,7 +71,7 @@ h1.logo {
 }
 
 .acciones form input:hover,
-.final .nuevo:hover {
+a.nuevo:hover {
     cursor: pointer;
     opacity: 0.8;
 }
@@ -60,8 +87,31 @@ h1.logo {
 }
 
 .puntaje {
+	padding: 10px;
     color: white;
     float: right;
+}
+
+th {
+	font-weight: 700;
+	font-size: 18px;
+	text-align: left;
+}
+
+table th,
+table td {
+	text-align: center;
+}
+
+.mesa {
+	
+	display: block;
+}
+
+.banca,
+.jugador {
+	float: left;
+margin: 0 5px;
 }
 
 .mazo {
@@ -69,38 +119,39 @@ h1.logo {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -45px;
+	border-bottom: 10px solid darkgrey;
 }
 
 .carta {
     background-color: white;
     border: 1px solid black;
-    border-radius: 10px;
-    height: 200px;
+    border-radius: 15px;
+	height: 360px;
     margin: 10px auto;
-    width: 120px;
+    width: 210px;
     color: #000000;
     
     box-shadow: 1px 1px 4px rgba(0,0,0,0.4),
 }
 
-.final {
-	background-color: rgba(0,0,0,0.8);
-	display: block;
-	height: 100%;
-	position: absolute;
-	width: 100%;
+.carta .num {
+	text-align: center;
+	vertical-align: middle;
+	margin: 0 auto;
+	top: 50%;
+	position: relative;
+	transform: translate(0, -50%);
+	font-size: 48px;
 }
 
-.final {
-	text-align: center;	
+@media (min-width: 480px) {
+	.mesa {
+		width: 440px;
+		margin: 0 auto;
+	}
 }
 
-.final .gana,
-.final .pierde {
-	font-size: 64px;
+@media {min-width:768px} {
+	
 }
-
-.final .nuevo {
-}
-
 

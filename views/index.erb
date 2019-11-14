@@ -10,54 +10,53 @@
 
 </head>
 <body>
-	<!-- <div class="final">
-		<div class="gana">
-		    Ganaste!
+	<div class="container">
+	<div class="row">
+		<h1 class="logo">7<span>&frac12;</span></h1>
+		    <table class="puntaje">
+			<th><h3>PUNTAJE</h3></th>
+			<tr>
+			    <th>Banca</th>
+			    <th>Jugador</th>
+			</tr>
+			<tr>
+			    <td id="puntajeBanca"><%=@puntajeBanca%></td>
+			    <td id="puntajeJugador"><%=@puntajeJugador%></td>
+			</tr>
+		    </table>
+	</div>
+	<div class="row">
+		<div class="mesa">
+			<div class="banca">
+				<div class="carta mazo"></div>
+			</div>
+			<div class="jugador">
+				<div class="carta muestra">
+					<div class="num">
+						<%=@cartaActual%>
+					</div>
+				</div>
+			</div>
+		<p>Resultado: <%=@resultado%></p>
 		</div>
-		<div class="pierde">
-		    LOSER!
+
+	</div>
+
+	<div class="footer">
+		<div class="acciones">
+			<a href="/" class="nuevo">Juego Nuevo</a>
+
+		    	<form method="post" action="/meplanto">
+		 	   <input type="submit" class="meplanto" value="Me Planto">
+			</form>
+
+			<form method="post" action="/pidecarta">
+		 	   <input type="submit" class="otra" value="Dame una carta">
+			</form>
 		</div>
-		<input type="submit" class="nuevo" value="Juego Nuevo">
-	</div> -->
-    <h1 class="logo">7<span>&frac12;</span></h1>
-    <table class="puntaje">
-        <th>Puntaje</th>
-        <tr>
-            <th>Banca</th>
-            <th>Jugador</th>
-        </tr>
-        <tr>
-            <td id="puntajeBanca"><%=@puntajeBanca%></td>
-            <td id="puntajeJugador"><%=@puntajeJugador%></td>
-        </tr>
-	&nbsp; Jugador Actual: <%=@jugadorActual%>
-	&nbsp; Resultado: <%=@resultado%>
-    </table>
-    <div class="banca">
-        <div class="">
-            <div class="carta mazo"></div>
-            <div class="carta muestra"><%=@cartaActual%></div>
-        </div>
+	    </div>
     </div>
-    <!--div class="jugador">
-        <div class="mesa">
-            <div class="carta muestra"><%=@cartaActual%></div>
-        </div>
-    </div-->
-    <div class="footer">
-        <div class="acciones">
-		<form method="post" action="/nuevo">
-         	   <input type="submit" class="nuevo" value="Juego Nuevo">
-		</form>
-
-            	<form method="post" action="/meplanto">
-         	   <input type="submit" class="meplanto" value="Plantarse">
-		</form>
-
-		<form method="post" action="/pidecarta">
-         	   <input type="submit" class="otra" value="Otra">
-		</form>
-        </div>
-    </div>
+	
+    
 </body>
 </html>

@@ -8,11 +8,11 @@ end
 
 When(/^pido carta y saco (\d+)$/) do |carta|
   @@juego.proximaCarta carta.to_i
-  click_button("Otra")
+  click_button("Dame una carta")
 end
 
 When(/^jugador se planta$/) do
-  click_button("Plantarse")
+  click_button("Me Planto")
 end
 
 When(/^banca pide carta y saco (\d+)$/) do |carta|
