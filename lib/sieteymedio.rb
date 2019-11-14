@@ -104,4 +104,5 @@ class Juego
 	def jugando
 		@jugando
 	end
+
 end
