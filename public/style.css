@@ -22,7 +22,17 @@ h1.logo {
     font-size: 36px;
 }
 
-.acciones form input {
+.acciones {
+	padding-top: 20px;
+}
+
+.acciones form {
+    display: inline-block;
+    width: auto;
+}
+
+.acciones form input,
+.final .nuevo {
     background-color: white;
     border: none;
     border-radius: 8px;
@@ -33,10 +43,10 @@ h1.logo {
     padding: 10px 20px;
 }
 
-.acciones form input:hover {
+.acciones form input:hover,
+.final .nuevo:hover {
     cursor: pointer;
     opacity: 0.8;
-    border-bottom: 4px solid rgba(0, 0, 0, 0.8);
 }
 
 .acciones form input.otra {
@@ -65,13 +75,32 @@ h1.logo {
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
-    display: inline-block;
     height: 200px;
+    margin: 10px auto;
     width: 120px;
     color: #000000;
     
     box-shadow: 1px 1px 4px rgba(0,0,0,0.4),
 }
 
-.final
+.final {
+	background-color: rgba(0,0,0,0.8);
+	display: block;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+}
+
+.final {
+	text-align: center;	
+}
+
+.final .gana,
+.final .pierde {
+	font-size: 64px;
+}
+
+.final .nuevo {
+}
+
 

@@ -10,16 +10,15 @@
 
 </head>
 <body>
-	<div class="final">
+	<!-- <div class="final">
 		<div class="gana">
 		    Ganaste!
-		    <button class="nuevo">Juego Nuevo</button>
 		</div>
 		<div class="pierde">
-		    Perdiste!
-		    <button class="nuevo">Juego Nuevo</button>
+		    LOSER!
 		</div>
-	</div>
+		<input type="submit" class="nuevo" value="Juego Nuevo">
+	</div> -->
     <h1 class="logo">7<span>&frac12;</span></h1>
     <table class="puntaje">
         <th>Puntaje</th>
@@ -28,7 +27,7 @@
             <th>Jugador</th>
         </tr>
         <tr>
-            <td id="puntajeBanca"><%=@@juego.puntajeBanca%></td>
+            <td id="puntajeBanca"><%=@puntajeBanca%></td>
             <td id="puntajeJugador"><%=@puntajeJugador%></td>
         </tr>
 	&nbsp; Jugador Actual: <%=@jugadorActual%>
