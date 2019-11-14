@@ -10,20 +10,22 @@ class Juego
 	end
 
 	def pideCarta
-		
-		if not @mocking			
-			sorteaProximaCarta
-		end
 
-		if @proxCarta>9 
-			@puntajeJugador += 0.5
-		else
-			@puntajeJugador += @proxCarta
-		end 	
+		if @jugando 		
+			if not @mocking			
+				sorteaProximaCarta
+			end
 
-		if @puntajeJugador>7.5
-			plantarse
-		end 		
+			if @proxCarta>9 
+				@puntajeJugador += 0.5
+			else
+				@puntajeJugador += @proxCarta
+			end 	
+
+			if @puntajeJugador>7.5
+				plantarse
+			end 
+		end		
 			
 	end
 
