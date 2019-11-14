@@ -2,6 +2,14 @@ Feature: Siete y medio
 
 Scenario: Abro el juego
  Given Abro el juego
+ Then debo ver "Resultado"
+
+Scenario: Abro el juego
+ Given Abro el juego
+ Then debo ver "Jugador Actual"
+
+Scenario: Abro el juego
+ Given Abro el juego
  When pido carta y saco 5
   And pido carta y saco 2
  Then debo ver "<td id="puntajeJugador">7</td>"
@@ -23,8 +31,11 @@ Scenario: Abro el juego
 
 Scenario: Abro el juego
  Given Abro el juego
- Then debo ver "Resultado"
+ When pido carta y saco 5
+  And pido carta y saco 2
+  And pido carta y saco 10
+  And jugador se planta
+ Then debo ver "<td id="puntajeJugador">7.5</td>"
+  And debo ver "Jugador Actual: MAQUINA"
 
-Scenario: Abro el juego
- Given Abro el juego
- Then debo ver "Jugador Actual"
+

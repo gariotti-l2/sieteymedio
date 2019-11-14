@@ -7,7 +7,12 @@ class Juego
 	end
 
 	def pideCarta
-		@puntajeJugador += @proxCarta
+		if @proxCarta>9 
+			@puntajeJugador += 0.5
+		else
+			@puntajeJugador += @proxCarta
+		end 
+		
 			
 	end
 
@@ -31,6 +36,7 @@ class Juego
 	def jugadorActual
 		@jugadorActual
 	end
+
 	def proximaCarta proxCarta
 		@proxCarta = proxCarta
 	end
