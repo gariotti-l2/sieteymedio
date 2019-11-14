@@ -13,6 +13,10 @@ class Juego
 		else
 			@puntajeJugador += @proxCarta
 		end 		
+		
+		if @puntajeJugador>7.5
+			plantarse
+		end 
 			
 	end
 
@@ -21,8 +25,7 @@ class Juego
 			@puntajeBanca += 0.5
 		else
 			@puntajeBanca += @proxCarta
-		end 
-		puts "Banca: " + @puntajeBanca.to_s		
+		end 	
 			
 	end
 
@@ -41,7 +44,16 @@ class Juego
 	end
 
 	def resultado
-		"PERDIO"
+	
+		if @jugadorActual=="MAQUINA"
+			if @puntajeJugador<=7.5 and @puntajeJugador>0 and ((@puntajeJugador>@puntajeBanca and @puntajeBanca<=7.5) or (@puntajeBanca>7.5))  
+				"GANO"
+			else
+				"PERDIO"
+			end
+		else
+			"JUGANDO"
+		end
 	end
 
 	def plantarse
