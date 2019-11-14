@@ -4,10 +4,10 @@ body {
     height: 100%;
     width: 100%;
 	
-color: #FFFFFF;
+    color: #FFFFFF;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 18px;
-	background-color: #0b6623;
+    background-color: #0b6623;
 }
 
 h1.logo {
@@ -22,24 +22,31 @@ h1.logo {
     font-size: 36px;
 }
 
-button {
+.acciones form input {
     background-color: white;
     border: none;
     border-radius: 8px;
     color: darkslategray;
     display: inline-block;
-    font-weight: 700;
     font-size: 18px;
-    letter-spacing: 0.025rem;
-    height: 50px;
     min-width: 120px;
     padding: 10px 20px;
 }
 
-button:hover {
+.acciones form input:hover {
     cursor: pointer;
     opacity: 0.8;
     border-bottom: 4px solid rgba(0, 0, 0, 0.8);
+}
+
+.acciones form input.otra {
+    background-color: greenyellow;
+    color: #000000;
+}
+
+.acciones form input.meplanto {
+    background-color: firebrick;
+    color: #FFFFFF;
 }
 
 .puntaje {
@@ -61,17 +68,10 @@ button:hover {
     display: inline-block;
     height: 200px;
     width: 120px;
+    color: #000000;
     
     box-shadow: 1px 1px 4px rgba(0,0,0,0.4),
 }
 
-.otra {
-    background-color: greenyellow;
-    color: black;
-}
-
-.planto {
-    background-color: firebrick;
-    color: white;
-}
+.final
 
