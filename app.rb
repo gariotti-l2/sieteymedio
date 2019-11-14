@@ -20,7 +20,15 @@ get '/dothings' do
 	erb :index    
 end
 
-post '/pidecarta' do	
+post '/pidecarta' do
+	p_carta= params["proximaCarta"]	
+
+	if p_carta.nil?
+		@@juego.sorteaProximaCarta
+	else
+		@@juego.proximaCarta p_carta.to_i
+	end
+
 	@@juego.pideCarta
 	@puntajeJugador= @@juego.puntajeJugador
 	@puntajeBanca= @@juego.puntajeBanca
@@ -32,6 +40,9 @@ end
 
 post '/meplanto' do
 	@@juego.plantarse
+
+	
+
 	@puntajeJugador= @@juego.puntajeJugador
 	@puntajeBanca= @@juego.puntajeBanca
 	@resultado= @@juego.resultado

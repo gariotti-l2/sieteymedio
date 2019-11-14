@@ -4,6 +4,7 @@ class Juego
 		@puntajeJugador = 0
 		@puntajeBanca = 0
 		@jugadorActual = "JUGADOR"
+		@jugando = true
 		@proxCarta = 0
 	end
 
@@ -47,12 +48,16 @@ class Juego
 	
 		if @jugadorActual=="MAQUINA"
 			if @puntajeJugador<=7.5 and @puntajeJugador>0 and ((@puntajeJugador>@puntajeBanca and @puntajeBanca<=7.5) or (@puntajeBanca>7.5))  
-				"GANO"
+				@jugando=false
+				return "GANO"
+				
 			else
-				"PERDIO"
+				@jugando=false
+				return "PERDIO"
+				
 			end
 		else
-			"JUGANDO"
+			return "JUGANDO"
 		end
 	end
 
@@ -71,6 +76,10 @@ class Juego
 
 	def proximaCarta proxCarta
 		@proxCarta = proxCarta
+	end
+
+	def jugando
+		@jugando
 	end
 
 end

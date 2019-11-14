@@ -87,4 +87,9 @@ describe "Juego" do
 		expect([1,2,3,4,5,6,7,10,11,12].include?(juego.cartaActual)).to eq true
 	end
 
+	it "inicia juego indica jugando" do
+		juego=Juego.new
+		expect(juego.jugando).to eq true
+	end
+
 end
