@@ -41,7 +41,20 @@ end
 post '/meplanto' do
 	@@juego.plantarse
 
+	p_auto= params["auto"]	
+
+	if p_auto.nil?
+		while @@juego.jugando do
 	
+			if @@juego.puntajeJugador>@@juego.puntajeBanca
+			   @@juego.sorteaProximaCarta
+			   @@juego.pideCartaBanca
+			else
+				break
+			end
+
+		end
+	end
 
 	@puntajeJugador= @@juego.puntajeJugador
 	@puntajeBanca= @@juego.puntajeBanca

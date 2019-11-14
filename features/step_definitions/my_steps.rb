@@ -11,14 +11,11 @@ When(/^pido carta y saco (\d+)$/) do |carta|
 end
 
 When(/^jugador se planta$/) do
-  click_button "Plantarse"
+  visit '/meplanto', :post, "auto=false"
 end
 
 When(/^banca pide carta y saco (\d+)$/) do |carta|
-  puts "Carta:" + carta.to_s
   @@juego.proximaCarta carta.to_i
-  puts "Carta acutal: " + @@juego.cartaActual.to_s
-  puts "Puntaje: " + @@juego.puntajeBanca.to_s
   @@juego.pideCartaBanca
   visit '/dothings'
 end

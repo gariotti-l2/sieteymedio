@@ -9,19 +9,29 @@ class Juego
 	end
 
 	def pideCarta
+
+		if not @proxCarta>=0			
+			sorteaProximaCarta
+		end
+
 		if @proxCarta>9 
 			@puntajeJugador += 0.5
 		else
 			@puntajeJugador += @proxCarta
-		end 		
-		
+		end 	
+
 		if @puntajeJugador>7.5
 			plantarse
-		end 
+		end 		
 			
 	end
 
 	def pideCartaBanca
+
+		if not @proxCarta>=0			
+			sorteaProximaCarta
+		end
+
 		if @proxCarta>9 
 			@puntajeBanca += 0.5
 		else
@@ -29,7 +39,6 @@ class Juego
 		end 	
 			
 	end
-
 
 	def cartaActual
 		@proxCarta
