@@ -6,6 +6,7 @@ get '/' do
 	@puntajeJugador= @@juego.puntajeJugador
 	@puntajeBanca= @@juego.puntajeBanca
 	@resultado= @@juego.resultado
+	@cartaActual= @@juego.cartaActual
 	@jugadorActual= @@juego.jugadorActual
 	erb :index    
 end
@@ -14,6 +15,7 @@ get '/dothings' do
 	@puntajeJugador= @@juego.puntajeJugador
 	@puntajeBanca= @@juego.puntajeBanca
 	@resultado= @@juego.resultado
+	@cartaActual= @@juego.cartaActual
 	@jugadorActual= @@juego.jugadorActual
 	erb :index    
 end
